@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - iPortfolio Bootstrap Template</title>
+  <title>Neuro Rehabilitation</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,12 +27,8 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.10.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- test -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 </head>
 
 <body>
@@ -84,8 +80,78 @@
     <section class="inner-page">
       <div class="container">
         <p>
-          Example inner page template
+          I worked for 3 years at the <i>Institut of Intelligent Systems and Robotics</i> (<a href="https://www.isir.upmc.fr/?lang=en">ISIR</a>).
+          I developed from scratch an upperlimb prosthesis (software, electronics and hardware) to study its control by transradial amputees.
         </p>
+        <p>
+          Indeed, while the hardware prosthesis improved a lot the last decade, its <b>control remained primary</b>: 
+          all commercial upperlimb prosthesis for transradial amputees in 2018 have a myoelectric control
+          of the prosthesis that uses muscles contractions from biceps/triceps. It is the same as controling the 
+          prosthesis with 2 ON/OFF buttons.
+        </p>
+        <p>
+          To improve the prosthesis control of transradial amputees, I worked with Dr Nathanaël Jarrasse on 
+          multiple approaches that uses either phantom limb movements or existing synergy in our daily movements.
+        </p>
+        
+        <div class="section-title" style="padding-top:20px">
+          <h2>Phantom Limb control</h2>
+          <p>
+            One way of controlling the prosthesis was through the phantom limb movements. Some amputees still have residual movement 
+            possibilities of their amputed limb. We recorded them with EMGs, labelled them and use a machine learning algorithm to classify the
+            different movements. We then program the prosthesis to mimic the detected movement.
+          </p>
+          <div class="ratio ratio-16x9" style="max-width:700px; margin-left:auto; margin-right:auto;">
+            <iframe src="../assets/video/neurorehab-phantomlimb.mp4" title="Phantom limb based prosthesis control" allowfullscreen></iframe>
+          </div>
+          <p style="padding-top:20px; padding-bottom:20px;">
+            There is a nice and short CNRS report from 2018 on the subject (in French): 
+          </p>
+          <div class="ratio ratio-16x9" style="max-width:700px; margin-left:auto; margin-right:auto;">
+            <iframe src="https://www.youtube.com/watch?v=Bb1SxtBsn9U" title="Phantom limb based prosthesis control" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="section-title" style="padding-top:20px">
+          <h2>Synergy based elbow control</h2>
+          <p>
+            This approach uses the synergy existing in a movement. The assumption is that the elbow opening is directly
+            function of the residual limb movement. We recorded multiple tasks with IMUs, created a model that gives the
+            elbow opening angle given the IMUs quaternions + accelerations and compared it with common myoelectric control.
+          </p>
+          <div class="ratio ratio-16x9" style="max-width:700px; margin-left:auto; margin-right:auto;">
+            <iframe src="../assets/video/neurorehab-kinematic.mp4" title="Synergy based elbow prosthesis control" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div id="humanintheloop" class="section-title" style="padding-top:20px">
+          <h2>Human-in-the-loop Machine Learning</h2>
+          <p>
+            The prosthesis control case is very interesting in a machine learning point of view because we train a model,
+            often based on a baseline experiment involving <i>people</i>, then we ask them to reproduce the task (a movement), 
+            hoping that the model will classify it. But, sometimes because of some setup limitations (time to classify > ~200 ms),
+            sometimes because of the task itself, <b>people change their behaviour using the model</b>. 
+          </p>
+          <p>
+            This change could be a <b>weakness</b> because the model did not see these data, so it probably will lead to wrong predictions.
+            But it could also be a <b>strenght</b>: in the phantom limb based control approach, we use this capacity from human to
+            learn, to adapt to guide them to a movement that itself is "better understanding" from the algorithm (the corresponding
+            class is further from the others). I wrote a <a href="https://ieeexplore.ieee.org/document/9119483">scientific paper</a> on this.
+            We showed that we were able to retrain a specific movement class, highly improving its False and True Positive rates while 
+            keeping the other movements/classes at the same rates.
+          </p>
+          <div style="max-width:500px; margin-left:auto; margin-right:auto;">
+            <img src="../assets/img/guidinglearning.PNG" class="img-fluid" alt="human in the loop learning">
+          </div>
+          <p>
+            The above figure shows in A. the confusion matrices before and after the retraining session. We see the the retrained class
+            (red rectangle) goes from 12% of right detection to 67%. This evolution is represented in B. with red/green color. In C.,
+            we see that the patient has changed its movement strategy, which leads to a global accuracy improvement in B.
+          </p>
+
+          
+        </div>
+        
       </div>
     </section>
 
