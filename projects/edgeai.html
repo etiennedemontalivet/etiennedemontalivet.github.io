@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - iPortfolio Bootstrap Template</title>
+  <title>Etienne de Montalivet - Edge AI</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,6 +26,9 @@
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
 
   <!-- =======================================================
   * Template Name: iPortfolio - v3.10.0
@@ -72,10 +75,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
+          <h2>Edge AI</h2>
           <ol>
             <li><a href="../index.html">Home</a></li>
-            <li>Inner Page</li>
+            <li>Edge AI</li>
           </ol>
         </div>
 
@@ -85,8 +88,134 @@
     <section class="inner-page">
       <div class="container">
         <p>
-          Example inner page template
+          For more than 2 years, I have worked on projects that embedded the AI on microcontrollers. I mainly worked on STM32
+          architecture, specifically with cortex M4 and M7 (for example the <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32h7-series.html">
+          STM32H7 series</a> or the <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f4-series.html">STM32F4 series</a>.
         </p>
+        <p>
+          In addition to develop skills in embedded machine learning, I had to code some classifiers and some features extraction based on
+          the <a href="https://www.keil.com/pack/doc/CMSIS/DSP/html/index.html">CMSIS DSP/NN Library</a> (note that it is now well-furnished but 
+          at the time, there was no classifer). That gave me the chance to deeply understand the algorithms.
+        </p>
+
+        <div class="section-title" style="padding-top:20px">
+          <h2>Discrete Wavelet Transform</h2>
+          <p>
+            For example, on a project, I investigated the Discrete Wavelet Transform feature and found out that it contained a lot of information
+            for our classification task. As for many other features, I coded it using the accelerated CMSIS-DSP Library and tested 
+            the results with the python library <a href="https://pywavelets.readthedocs.io/en/latest/">PyWavelet</a>. 
+            You can find the <b>full code on my gihub</b> in the 
+            <a href="https://github.com/etiennedemontalivet/arm-dwt-c-library">arm-dwt-c-library repo</a>. Here is a sample code from the 
+            *.h file.
+          </p>
+          <p style="padding: 10px">
+            <small>
+              <pre><code class="langage-c">
+              /**
+                * @brief  This function initializes the dwt.
+                * @param	filtersLength			: Length of high and low filters
+                * @param	pHighFilter			: Pointer to high pass filter.
+                * @param	pLowFilter			: Pointer to low pass filter.
+                * @param	extrapolationFlag		: Extrapolation method
+                * @param	decLevel			: Number of DWT level
+                * @param	pInternalBuffer			: Pointer to internal buffer
+                * @param	internalBufferSize		: Size of internal buffer
+                * @param	pDWTInstance			: pointer to the dwt instance structure
+                *
+                * @note   None.
+                * @retval arm_dwt_status
+                */
+              arm_dwt_status arm_dwt_init_f32(
+                  uint32_t 					filtersLength,
+                  float32_t* 					pHighFilter,
+                  float32_t* 					pLowFilter,
+                  arm_dwt_extrapolation_flag 	                extrapolationFlag,
+                  uint32_t 					decLevel,
+                  float32_t*					pInternalBuffer,
+                  uint32_t 					internalBufferSize,
+                  arm_dwt_instance_f32* 		        pDWTInstance 
+              );
+              
+              /**
+                * @brief  This function runs the dwt computation.
+                * @param	pDWTInstance	        : pointer to the dwt instance structure
+                * @param	pSignal			: pointer to input signal
+                * @param	blockSize		: size of input signal
+                * @param	pOut			: pointer to the full dwt output structure
+                *
+                * @note   None
+                * @retval arm_dwt_status
+                */
+              arm_dwt_status arm_dwt_f32(
+                  arm_dwt_instance_f32* pDWTInstance,
+                  float32_t* pSignal,
+                  uint32_t blockSize,
+                  arm_dwt_out_f32* pOut
+              );
+              </code></pre>
+            </small>
+          </p>
+        </div>
+
+        <div class="section-title" style="padding-top:20px">
+          <h2>Neural Networks</h2>
+          <p>
+            I also worked a lot with Embedded Neural Networks, both convolutional and dense neural networks. I was a beta-tester 
+            of the <a href="https://www.st.com/content/st_com/en/campaigns/stm32cube-ai.html">STM32CubeAI</a> which is a software 
+            tool to import and convert pre-trained Machine Learning or Neural Network models into optimized C code for STM32.
+          </p>
+          <p>
+            For example, let's take 2 Dense Neural Networks with the following architecture:
+          </p>
+
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <div class="col">
+                <img src="../assets/img/edge_nn1.PNG" class="img-fluid" style="max-height:300px"/>
+                <figcaption><small><i>Neural Network 1 : 20 inputs - 64 cells - 64 cells - 10 outputs</i></small></figcaption>
+              </div>
+              <div class="col">
+                <img src="../assets/img/edge_nn2.PNG"  class="img-fluid" style="max-height:400px"/>
+                <figcaption><small><i>Neural Network 2 : 400 inputs - 256 cells - 64 cells - 10 outputs</i></small></figcaption>
+              </div>
+            </div>
+          </div>
+
+          <p style="padding-bottom:10px">
+            When running them on a STM32F4 board, I obtained the following:
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">STM32 F411RE</th>
+                <th scope="col">Neural Network 1</th>
+                <th scope="col">Neural Network 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">HClock (MHz)</th>
+                <td>84</td>
+                <td>84</td>
+              </tr>
+              <tr>
+                <th scope="row">Execution Time (<b>ms</b>)</th>
+                <td>0.583</td>
+                <td>9.973</td>
+              </tr>
+              <tr>
+                <th scope="row">ROM (KBytes)</th>
+                <td>24.04</td>
+                <td>467.79</td>
+              </tr>
+              <tr>
+                <th scope="row">RAM (Bytes)</th>
+                <td>512</td>
+                <td>1250</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -124,6 +253,9 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
 </body>
 
