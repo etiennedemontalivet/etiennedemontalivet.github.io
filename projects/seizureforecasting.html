@@ -85,8 +85,101 @@
     <section class="inner-page">
       <div class="container">
         <p>
-          Work In Progress
+          I work since June 2021 at <a href="http://www.clinatec.fr/en/">Clinatec</a>, a medical research laboratory in the 
+          <a href="https://www.cea.fr/english">CEA</a>. I work specifically on seizure forecasting for a project that aims at
+          developing and testing a neuroprosthesis to apply a cooling therapy to inhibit seizures. 
         </p>
+
+        <div class="section-title" style="padding-top:20px">
+          <h2>Database</h2>
+          <p>
+            Because cooling therapy probably will be applied close to the epileptogenic focus, I have worked with depth electrodes on
+            patients from the <a href="http://epilepsy-database.eu/">Epilepsiae Database</a>:
+          </p>
+          <div class="myimage">
+            <img src="../assets/img/sf_patients.PNG" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="section-title" style="padding-top:20px">
+          <h2>Labellisation</h2>
+          <p>
+            I have used the most common state-of the art approach to label the data. From the database are only annotated
+            the seizures and the subclinical seizures. <b>Seizure forecasting consist in classifying a preictal state from an 
+            interictal state</b>. Interictal state is often refered as a normal state opposed to the preictal period in which 
+            we hope to find biomarkers, precursors of the coming seizure. The preictal duration is choosen by researcher and 
+            I tried with 1 hour/15min.
+          </p>
+          <div class="myimage" style="max-width:1000px;">
+            <img src="../assets/img/sf_labels.PNG" class="img-fluid" alt="">
+          </div>
+          <p>
+            It is important to note that this labellisation applies only on <b>training</b>. Once the binary classifer is trained,
+            I tested on all the data of one <i>group</i> using 
+            <a href="https://scikit-learn.org/stable/modules/cross_validation.html#leave-one-out">Leave One Out</a> approach, one 
+            <i>group</i> being made of data from postictal to the next seizure.
+          </p>
+        </div>
+
+        <div class="section-title" style="padding-top:20px">
+          <h2>Pipeline and Metrics</h2>
+          <h3>Pipeline</h3>
+          <p>
+            I cannot detail the pipeline as a scientific article is in the process of being published, but the approach is 
+            quite common in time-series:
+          </p>
+          <div class="myimage">
+            <img src="../assets/img/sf_pipeline.PNG" class="img-fluid" alt="">
+          </div>
+          <p>
+            Note that the post-processing step is quite uncommon. I won't detail it here, but the idea is to filter the output
+            of the classifier which is very noisy, and to extract a threshold above which the preictal state is detected.
+          </p>
+
+          <h3 style="padding-top:10px;">Metrics</h3>
+          <p>
+            Metrics are crucial in Machine Learning. A lot of scientific papers use the AUC in seizure forecasting to evaluate
+            their models. It is relevant but has some limitations. First, it does not reflect the capacity to learn a threshold 
+            from a training/validation set to the test set. Secondly, it only applies on <i>interictal</i> and <i>preictal</i>
+            labels, but remember that we have a lot more data. Finally, and maybe most importantly, we do seizure forecasting not 
+            to achieve the best AUC, but to create a system for people with epilepsy. This system could be a warning system,
+            a closed-loop cooling therapy system, or whatever. In any case, this system will have timing constaints. For example,
+            you probably don't want your alarm system to change the output every 5 seconds.
+          </p>
+          <p>
+            Those reasons lead to the use of 3 metrics on top of the AUC: 
+            <ul style="padding-top: 5px">
+              <li><b>Time In Warning</b>: this is the total time of preictal detection, including all data.</li>
+              <li><b>Sensitivity</b>: this is the percentage of predicted seizures.</li>
+              <li><b>Improvement Over Change</b>: this is the improvement over a Random Process Poisson classifier that has the same 
+                Time In Warning duration. See <a href="#seizurestats">[1]</a> for more details.</li>
+            </ul>
+            See <a href="#seizurestats">[1]</a> for more details on seizure forecasting metrics.
+          </p>
+          <p style="padding-top:5px;">
+            <small id="seizurestats" >
+              <i>
+                [1] Snyder DE, Echauz J, Grimes DB, Litt B. The statistics of a practical seizure warning system. J Neural Eng. 2008 Dec;
+                5(4):392-401. doi: 10.1088/1741-2560/5/4/004
+              </i>
+            </small>
+          </p>
+        </div>
+
+        <div class="section-title" style="padding-top:20px">
+          <h2>Results</h2>
+          <p>
+            Results are coming. I obtained more than 30% of Improvement Over Chance for most patients. Two above 50%.
+          </p>
+          <br>
+          <p>
+            It is quite good knowing that there is no continous-tested results on the Epilepsiae Database, and that
+            current state-of-the art results that give all those metrics are the following:
+          </p>
+          <div class="myimage">
+            <img src="../assets/img/sf_soaresults.PNG" class="img-fluid" alt="">
+          </div>
+        </div>
       </div>
     </section>
 

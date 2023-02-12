@@ -1102,3 +1102,14 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/*--------------------------------------------------------------
+# Etienne's adds
+--------------------------------------------------------------*/
+.myimage {
+  max-width:700px; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left:auto;
+  margin-right:auto;
+}
