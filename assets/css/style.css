@@ -1113,3 +1113,7 @@ section {
   margin-left:auto;
   margin-right:auto;
 }
+
+#header {
+  z-index: 1000 !important;
+}
