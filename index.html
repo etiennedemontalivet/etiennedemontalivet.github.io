@@ -5,282 +5,166 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Etienne de Montalivet - Personal Page</title>
-  <meta content="Etienne de Montalivet Personal Page" name="description">
-  <meta content="Etienne de Montalivet, Personal Page, Data Scientist" name="keywords">
+  <title>Etienne de Montalivet</title>
+  <meta content="" name="description">
+  <meta content="NeuroAI, ML, DeepLearning, Neuroscientist, Data Science" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.10.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
   <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Etienne de Montalivet</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://www.linkedin.com/in/etienne-de-montalivet/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/etiennedemontalivet" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://datascience.stackexchange.com/users/69478/etiennedm" class="stack-overflow"><i class="bx bxl-stack-overflow"></i></a>
-        </div>
-      </div>
+      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.png" alt="">
+      </a>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-          <li><a href="#gallery" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Gallery</span></a></li>
-          <li><a href="Etienne_de-Montalivet__CV.pdf" class="nav-link scrollto"><i class="bx bx-download"></i> <span>Download CV</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+      <nav id="navbar" class="navbar">
+
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="https://www.linkedin.com/in/etienne-de-montalivet/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/etiennedemontalivet" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://datascience.stackexchange.com/users/69478/etiennedm" class="stack-overflow"><i class="bi bi-stack-overflow"></i></a>
+    </div>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Etienne de Montalivet</h1>
-      <p>
-        I'm a
-        <span class="typed" data-typed-items="Data Scientist, Machine Learning Researcher, Data Processing Engineer, Software Developer"></span>
-      </p>
+  <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h2>Etienne de Montalivet</h2>
+          <h4><i>Machine Learning Scientist</i></h3>
+          <p>Leveraging cutting-edge AI advancements for enhancing our comprehension of neurological disorders and advancing corresponding therapies</p>
+          <a href="https://www.linkedin.com/in/etienne-de-montalivet/" class="btn-get-started">Let's connect <i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
     </div>
-  </section><!-- End Hero -->
+  </section><!-- End Hero Section -->
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>
-            I am a Data Scientist.
-          </p>
-          <p>
-            To me, domain expertise and deep understanding of the machine learning / data analysis algorithms are the key to tackle any challenge.
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-diagram-3"></i></div>
-            <h4 class="title">Machine Learning</h4>
-            <p class="description">
-              All ML algorithms, from the simplest one to the most complex architecture are tools that allow us to tackle new challenges.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title">Statistics</h4>
-            <p class="description">
-              Statistics are a key to analyze results: from the data distribution to the right test to validate a scientific hypothesis.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-graph-up"></i></div>
-            <h4 class="title">Data Analysis</h4>
-            <p class="description">
-              Through the right visualization with domain expertise knowledge, understanding the data is crucial.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-question-lg"></i></div>
-            <h4 class="title">Ask the right question</h4>
-            <p class="description">
-              Understanding a challenge from the data collection to the ultimate goal helps finding the right approach.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-people"></i></div>
-            <h4 class="title">Team Working</h4>
-            <p class="description">
-              The synergy of a team, its dynamism and the support between each other allow to go further. 
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-arrow-left-right"></i></div>
-            <h4 class="title">Sharing Ideas</h4>
-            <p class="description">
-              Sharing our ideas with others is a win-win process and is required to build complex reasoning.  
-            </p>
-          </div>
-        </div>
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">python <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Machine Learning - <i>Statistics, Clustering, Neural Networks, Decision Trees, ...</i> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">TeamWork <i class="val"></i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="progress">
-              <span class="skill">C, C++, Matlab <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-    
-            <div class="progress">
-              <span class="skill">ML Frameworks - <i>sklearn, Tensorflow, PyTorch, scipy, holoviews </i> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Adaptability <i class="val"></i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Projects</h2>
-          <p>
-            Here are some projects I have worked on. Note that because I have worked in research
-            and innovative departments, I can unfortunately not provide the full insights of the
-            projects (source code, full algorithms, ...).
-          </p>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/neurorehab.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="projects/neurorehab.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/seizureforecasting.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="projects/seizureforecasting.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/edgeai.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="projects/edgeai.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/knowledge.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="projects/teaching.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End Portfolio Section -->
+  <main id="main" data-aos="fade" data-aos-delay="1500">
 
     <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="">
-      <div class="container">
+    <section id="gallery" class="gallery">
+      <div class="container-fluid">
 
-        <div class="section-title">
-          <h2>Gallery</h2>
-        </div>
-        <div class="row justify-content-center">
-          <a href="assets/video/isir_armband.mp4" data-toggle="lightbox" data-gallery="hidden-images" class="col-4">
-            <img src="assets/img/armband.png" class="img-fluid">
-          </a>
-          <a href="assets/img/isir_card.jpg" data-toggle="lightbox" data-gallery="hidden-images" class="col-4">
-            <img src="assets/img/isir_card.jpg" class="img-fluid">
-          </a>
-          <a href="assets/video/mutual_learning.mp4" data-toggle="lightbox" data-gallery="hidden-images" class="col-4">
-            <img src="assets/img/mutual_learning_min.png" class="img-fluid">
-          </a>
-          <!-- elements not showing, use data-remote or data-src-->
-          <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://www.youtube.com/watch?v=qhWperPtnas" data-title="Neural Network Visualization"></div>
-          <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://www.youtube.com/watch?v=Bb1SxtBsn9U" data-title="CNRS reportage"></div>
-          <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://www.youtube.com/watch?v=Hzhref2_aYE" data-title="Robotic Arm control"></div>
-          <div data-toggle="lightbox" data-gallery="hidden-images" data-src="./assets/img/brain_data.png" data-title="Brain data"></div>
+        <div class="row gy-4 justify-content-center">
+          
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="assets/img/gallery/inserm-chercheurbrasrobot-plargueur.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/inserm-chercheurbrasrobot-plargueur.jpg" title="It's difficult to know, without looking, if a prosthesis is correctly oriented. In this experiment, we tested the a vibrotactile sensory-feedback. The muscular contractions of the good arm, captured using
+                electrodes, control the robotic hand. Vibrations on the forearm give information about the hand orientation.<br><i>Photos : Inserm/François Guénet</i></br>" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/synapsuit_min.png" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/synapsuit.png" title="At the Wyss Center, I am part of the <a href='https://wysscenter.ch/advances/synapsuit' class='details-link'>Synapsuit project<i class='bi bi-link-45deg'></i></a>. Synapsuit is a collaborative project designed to develop high-performance AI-algorithms to decode complex brain signals to control a lightweight soft wearable exosuit to support arms and hands movements in real time." class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/neurorehab-kinematic.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/video/gallery/neurorehab-kinematic.mp4" title="Comparison between a classic myoelectric control of the prosthesis elbow joint with an IMU-based decoder that uses shoulder/elbow synergy to predict elbow angle in real-time. " class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/innervoice_min.png" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/innervoice.png" title="At the Wyss Center, I am part of the <a href='https://wysscenter.ch/advances/innervoice' class='details-link'>Innervoice project<i class='bi bi-link-45deg'></i></a>.Brain-to-speech decoding could provide a crucial lifeline for those who have lost the ability to communicate because of motor neuron disorders, spinal cord injury or stroke." class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                
+              </div>
+            </div>
+            
+          </div><!-- End col1 Gallery -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="assets/img/gallery/inserm-brasrobotecran-plargueur.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/inserm-brasrobotecran-plargueur.jpg" title="Depending on which vibrators are activated, participant estimates the hand prosthesis orientation without visual feedback.<br><i>Photos : Inserm/François Guénet</i></br>" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/mutual_learning_min.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/video/gallery/mutual_learning.mp4" title="Using a visual feedback based on brain data, we can guide the training process to specific strategies that maximize the interclass differences in the decoder space. Here is an example with two strategies of hand-opening." class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div><!-- End col2 Gallery -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="assets/img/gallery/inserm-chercheurbrasrobot2-plargueur.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/inserm-chercheurbrasrobot2-plargueur.jpg" title="Experiment to test the IMU-based control of the prosthesis with an EMG armband (right arm) controlling the hand/wrist movements.<br><i>Photos : Inserm/François Guénet</i></br>" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/isir_card.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/isir_card.jpg" title="This is the PCB I designed and soldered myself which, combined with a Pi module, controls the whole upperlimb prosthesis. It contains 4 ADCs, 2 DACs, 1 touch MCU, 1 IMU, multiple IOs. " class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/ied_seizure.png" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/ied_seizure.png" title="I tried to forecast epileptic seizures using a new biomarker based on a model-estimation of the end of an IED <i>(Interictal Epileptic Discharge)</i>. Results were not statistically significant." class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div><!-- End col3 Gallery -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="assets/img/gallery/neurorehab-phantomlimb.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/video/gallery/neurorehab-phantomlimb.mp4" title="Upper-limb prosthesis controlled in real-time by phantomlimb movements (based on EMG data classification)" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/edgeai.png" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/edgeai.png" title="I implemented and tested this NN architecture on a STM32F4 µ-controller. Running at full speed (84MHz), inference takes <b>~9.9ms</b> to run with a footprint memory of less than 500kBytes in ROM.<br>It has then been used in predictive maintenance for rotating machines." class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/teach_overfitting.gif" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/teach_overfitting.gif" title="Please have a seat, grab popcorn, and watch this neural network overfits." class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div><!-- End col4 Gallery -->
+
         </div>
       </div>
     </section><!-- End Gallery Section -->
@@ -288,34 +172,33 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" class="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
+        &copy; Copyright <strong><span>PhotoFolio</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/ -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a><br>
-        Improved by Etienne de Montalivet
+        Improved by <img src="assets/img/logo.png" style="height: 20px">
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/js/index.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
