@@ -169,6 +169,102 @@
       </div>
     </section><!-- End Gallery Section -->
 
+
+    <section id="biblio">
+      <div class="container-fluid">
+
+        <h3 style="margin-top:2rem">Scientific publications</h3>
+        <bibtex src="assets/refs.bib"></bibtex>
+        <div id="bibtex_display"></div>
+
+        <!-- Template to use to print bib entries -->
+        <div class="bibtex_template">
+          <div class="if author" style="font-weight: bold;">
+            <span class="if year">
+              <span class="year"></span>, 
+            </span>
+            <span class="author" max="1"></span>
+            <span class="if journal">
+              - <span class="journal" style="font-style: italic; font-weight: normal;"></span> 
+            </span>
+            <span class="if url" style="margin-left:20px;">
+              <a class="bibtexVar" href="+URL+" extra="url">
+                <span style="font-size:10px">(view online)</span>
+              </a>
+            </span>
+            <span class="if !url">
+              <span class="if doi" style="margin-left:20px;">
+                <a class="bibtexVar" href="http://dx.doi.org/+DOI+" extra="doi">
+                  <span style="font-size:10px">(view online)</span>
+                </a>
+              </span>
+            </span>
+          </div>
+          <div style="margin-left: 10px; margin-bottom:5px;">
+            <span class="title"></span>
+          </div>
+        </div>
+        
+        <!-- Bib structure -->
+        <div class="bibtex_structure">
+          <div class="sections bibtextypekey">
+            <div class="accordion align-items-center" id="accordionFlushExample">
+              <div class="accordion-item" style="color: white">  
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed bg-dark" style="color: white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Refereed Articles
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="section article">
+                      <div class="sort year" extra="DESC number">
+                        <div class="templates"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="color: white">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed bg-dark" style="color: white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Conference and Workshop Papers
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse bg-dark" aria-labelledby="headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="section inproceedings">
+                      <div class="sort year" extra="DESC number">
+                        <div class="templates"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- raw -->
+      <!-- <div class="bibtex_structure">
+        <div class="sections bibtextypekey">
+          <div class="section article">
+            <h1>Refereed Articles</h1>
+            <div class="sort year" extra="DESC number">
+              <div class="templates"></div>
+            </div>
+          </div>
+          <div class="section inproceedings">
+            <h1>Conference and Workshop Papers</h1>
+            <div class="sort year" extra="DESC number">
+              <div class="templates"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -202,6 +298,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Bibtex JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script>
 
 </body>
 
